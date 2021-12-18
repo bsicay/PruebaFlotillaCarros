@@ -1,0 +1,44 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/vehicles/add" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="marca" class="form-control" placeholder="Marca" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="modelo" class="form-control" placeholder="Modelo">
+                        </div>
+                        <div class="form-group">
+                            <input type = "number" name="anio" rows="2" class="form-control" placeholder="Anio"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type = "text" name="placas" rows="2" class="form-control" placeholder="Placas"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="estado">
+                            <option selected>Estado</option>
+                            <option value="Perfecto">Perfecto</option>
+                            <option value="Daño menor">Daño menor</option>
+                            <option value="Reparación urgente">Reparación urgente</option>
+                            <option value="En reparación">En reparación</option>
+                            <option value="Descarte">Descarte</option>
+                        </select>
+                        </div>
+                        
+                        {{!-- <div class="form-group">
+                            <textarea name="estado" rows="2" class="form-control" placeholder="Estado del vehiculo"></textarea>
+                        </div> --}}
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

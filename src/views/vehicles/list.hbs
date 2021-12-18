@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each vehicles}}
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{marca}}
+                    </h3>
+                    <h4 class="m-2">{{modelo}}</h4>
+                    <p class="m-2">Año: {{anio}}</p>
+                    <p class="m-2">Placas: {{placas}}</p>
+                    <p class="m-2">Estado: {{estado}}</p>
+                    <a href="/vehicles/delete/{{id}}" class="btn btn-danger">
+                        Delete Vehicle
+                    </a>
+                    <a href="/vehicles/edit/{{id}}" class="btn btn-secondary">
+                        Edit
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>No existe ningun registro de vehiculos</p>
+                <a href="/vehicles/add">Crea un registro!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
