@@ -19,7 +19,8 @@ router.post('/add', isLoggedIn, async(req, res) => {
         modelo, 
         anio,
         placas,
-        estado
+        estado, 
+        userID: req.user.id
     };
     await pool.query('INSERT INTO vehicles set ?', [newVehicle]);
     req.flash('success', 'Vehiculo guardado exitosamente');
@@ -28,7 +29,7 @@ router.post('/add', isLoggedIn, async(req, res) => {
 
 //listando los vehiculos
 router.get('/', isLoggedIn, async (req, res) => {
-    const vehicles = await pool.query('SELECT * FROM vehicles');
+    const vehicles = await pool.query('SELECT * FROM vehicles WHERE userID = ?', [req.user.id]);
     res.render('vehicles/list', { vehicles });
 });
 
