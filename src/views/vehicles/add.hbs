@@ -14,7 +14,7 @@
                             <input type = "number" name="anio" rows="2" class="form-control" placeholder="Anio"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type = "text" name="placas" rows="2" class="form-control" placeholder="Placas"></textarea>
+                            <input type="text" class="form-control" pattern="[O-P]{1}[-][A-Z]{3}\d{3}" name="placas" placeholder="Placa" title="Placas deben de llevar el formato. e.g. P-ABC123">
                         </div>
                         <div class="form-group">
                             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="estado">
