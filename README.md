@@ -75,7 +75,7 @@ select *from vehicles;
 
 ```
 
-_Ejecutar en el terminal el siguiente comando pra iniciar la aplicación_
+_Ejecutar en la terminal el siguiente comando pra iniciar la aplicación_
 
 ```
 npm run dev
